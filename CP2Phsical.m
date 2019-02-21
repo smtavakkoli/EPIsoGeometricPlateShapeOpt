@@ -25,10 +25,10 @@ for j=1:n_e
     for i1=0:n1
 
         e=U1{patch_index}(inde)+i1*me/n1;
-        N=nurbs2(DP1,U1{patch_index},inde-DP1,inde,inde,e);
+        N=BuildNurbs(DP1,U1{patch_index},inde-DP1,inde,inde,e);
         for i2=0:n2
                 n=U2{patch_index}(indn)+i2*mn/n2;
-                M=nurbs2(DP2,U2{patch_index},indn-DP2,indn,indn,n);    
+                M=BuildNurbs(DP2,U2{patch_index},indn-DP2,indn,indn,n);    
                 Px=P1{j};
                 Py=P2{j};
                 X{j}(i1+1,i2+1)=M'*Px*N;
