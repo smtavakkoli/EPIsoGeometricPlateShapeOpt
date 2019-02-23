@@ -76,8 +76,8 @@ for i=1:N
     end
 end
 clear ux uy
-E=inp(2:noe+1,5);v=inp(2:noe+1,6);t=inp(2:noe+1,7);
-effective_stress=inp(2:noe+1,8);H=inp(2:noe+1,9);
+E=inp(1:noe+1,5);v=inp(1:noe+1,6);t=inp(1:noe+1,7);
+effective_stress=inp(1:noe+1,8);H=inp(1:noe+1,9);
 cocp=inp(:,10:12);
 cocp(isnan(cocp(:,1)),:)=[];
 COCP=cocp;
